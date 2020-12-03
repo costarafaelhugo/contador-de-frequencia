@@ -5,11 +5,12 @@ document.getElementById("countButton").onclick = function () {
     typedText = typedText.toLowerCase();
     typedText = typedText.replace(/[^a-z'\s]+/g, "");
     document.getElementById("lettersDiv").innerHTML=""
-    document.getElementById("wordsDiv").style.display='none'
+    document.getElementById("wordsDiv").innerHTML=""
     
     const letterCounts = {};
     if (typedText === "" ){
         alert("Por favor digite algum texto.")
+        document.getElementById("wordsDiv").innerHTML.style.dysplay=none
     }
 
     for (let i = 0; i < typedText.length; i++) {
