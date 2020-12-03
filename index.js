@@ -32,15 +32,15 @@ document.getElementById("countButton").onclick = function () {
     }
 
     words = typedText.split(/\s/);
-
-    const countWords = {
-
-    };
+  
+    const countWords = {};
 
 
     for (let i = 0; i < words.length; i++) {
         currentWord = words[i];
-
+        // if (words===" "){
+        //     words = 0
+        //   }
 
 
 
