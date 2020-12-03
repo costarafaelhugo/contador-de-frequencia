@@ -4,8 +4,13 @@ document.getElementById("countButton").onclick = function () {
     let typedText = document.getElementById("textInput").value;
     typedText = typedText.toLowerCase();
     typedText = typedText.replace(/[^a-z'\s]+/g, "");
+    document.getElementById("lettersDiv").innerHTML=""
+    document.getElementById("wordsDiv").style.display='none'
+    
     const letterCounts = {};
-
+    if (typedText === "" ){
+        alert("Por favor digite algum texto.")
+    }
 
     for (let i = 0; i < typedText.length; i++) {
         currentLetter = typedText[i];
@@ -51,6 +56,11 @@ document.getElementById("countButton").onclick = function () {
         var wordsSpan = document.createElement('span')
         wordsSpan= document.createTextNode(words + ": " + countWords[words] + ', ')
         div2.appendChild(wordsSpan)
+            
     }
+
+
 }
+
+
 
